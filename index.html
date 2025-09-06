@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VESNA • LPG Studio</title>
 
-    <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/promo.css">
+    <link rel="stylesheet" href="styles/trial-offers.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/before-after.css">
+    <link rel="stylesheet" href="styles/reviews.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <style>
+        .is-open {
+            body {
+                overflow-y: hidden;
+            }
+        }
+    </style>
 </head>
 <body>
 <header class="hero">
@@ -21,11 +38,10 @@
             <div class="nav__left">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#">Главная</a></li>
-                    <li class="nav__item"><a href="#">Услуги и цены</a></li>
-                    <li class="nav__item"><a href="#">Акции</a></li>
-                    <li class="nav__item"><a href="#">До/После</a></li>
-                    <li class="nav__item"><a href="#">Отзывы</a></li>
-                    <li class="nav__item"><a href="#">Контакты</a></li>
+                    <li class="nav__item"><a href="#Services">Услуги и цены</a></li>
+                    <li class="nav__item"><a href="#Promo">Акции</a></li>
+                    <li class="nav__item"><a href="#ba">До/После</a></li>
+                    <li class="nav__item"><a href="#about">О нас</a></li>
                 </ul>
             </div>
             <button class="burger-button" aria-label="Открыть меню">
@@ -35,7 +51,7 @@
             </button>
 
             <div class="nav__right">
-                <a href="#" class="nav__cta">Онлайн запись</a>
+                <a href="ЗАПОЛНИТЬ ССЫЛКУ" class="nav__cta">Онлайн запись</a>
             </div>
         </div>
     </nav>
@@ -51,11 +67,117 @@
             <a href="#">Онлайн запись</a>
         </nav>
     </div>
+    <h1 class="Vesna-logo">VESNA</h1>
     <div class="container">
-        <img src="images/Лого.PNG" class="hero__img hero__img--main" alt="">
+        <img src="images/New_bg.JPEG" class="hero__img hero__img--main" alt="">
     </div>
 </header>
-<section class="promo" id="promo">
+<section class="services" id="Services">
+    <h2 class="services__title">Услуги и цены</h2>
+    <div class="container">
+        <div class="services-swiper">
+            <div class="swiper-wrapper">
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/лицо+тело1.jpg" alt="Лицо + тело" class="card__image">
+                    </div>
+                    <h3 class="card__name">ЛИЦО + ТЕЛО</h3>
+                    <p class="card__price"><br>От 2000₽.</p>
+                    <!-- добавили только атрибут для идентификации сервиса -->
+                    <button class="card__button js-open-modal" data-service="face-body">
+                        Узнать больше
+                    </button>
+                </article>
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/обложка мах.jpg" alt="Тройной удар MAX" class="card__image">
+                    </div>
+                    <h3 class="card__name">ТРОЙНОЙ УДАР MAX</h3>
+                    <p class="card__price"><br>От 3000₽.</p>
+                    <button class="card__button js-open-modal" data-service="triple-strike-max">
+                        Узнать больше
+                    </button>
+                </article>
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/пресс обл.jpg" alt="Прессотерапия + ИК-прогрев" class="card__image">
+                    </div>
+                    <h3 class="card__name">ПРЕССОТЕРАПИЯ + ИК-ПРОГРЕВ</h3>
+                    <p class="card__price">От 1000₽.</p>
+                    <button class="card__button js-open-modal" data-service="presso-ik">
+                        Узнать больше
+                    </button>
+                </article>
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/LPG массаж тела.jpg" alt="LPG массаж тела" class="card__image">
+                    </div>
+                    <h3 class="card__name">LPG МАССАЖ ТЕЛА</h3>
+                    <p class="card__price">От 1000₽.</p>
+                    <button class="card__button js-open-modal" data-service="lpg-body">
+                        Узнать больше
+                    </button>
+                </article>
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/лицо.jpg" alt="LPG массаж лица" class="card__image">
+                    </div>
+                    <h3 class="card__name">LPG МАССАЖ ЛИЦА</h3>
+                    <p class="card__price">От 2200₽.</p>
+                    <button class="card__button js-open-modal" data-service="lpg-face">
+                        Узнать больше
+                    </button>
+                </article>
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/кавитация.jpg" alt="Кавитация" class="card__image">
+                    </div>
+                    <h3 class="card__name">КАВИТАЦИЯ</h3>
+                    <p class="card__price">От 2200₽.</p>
+                    <button class="card__button js-open-modal" data-service="cavitation">
+                        Узнать больше
+                    </button>
+                </article>
+
+                <article class="card swiper-slide">
+                    <div class="card__image-wrapper">
+                        <img src="images/рф.jpg" alt="RF-лифтинг" class="card__image">
+                    </div>
+                    <h3 class="card__name">RF-ЛИФТИНГ</h3>
+                    <p class="card__price">От 2200₽.</p>
+                    <button class="card__button js-open-modal" data-service="rf-lifting">
+                        Узнать больше
+                    </button>
+                </article>
+
+            </div><!-- /.swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+        </div><!-- /.services-swiper -->
+        <div class="services__button">
+            <button class="animated-button">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                </svg>
+                <span class="text">Выбрать услугу</span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+    </div><!-- /.container -->
+</section>
+<section class="promo" id="Promo">
     <div class="promo__container">
         <h2 class="promo__title">Акции</h2>
         <ul class="promo__list">
@@ -78,7 +200,7 @@
                 <div class="promo__num">3</div>
                 <div class="promo__body">
                     <h3 class="promo__offer">Скидка 15%</h3>
-                    <p class="promo__note">При покупке абонемента в день последней процедуры</p>
+                    <p class="promo__note">*В день рождения</p>
                 </div>
             </li>
         </ul>
@@ -150,112 +272,7 @@
         *продолжительность сеанса соответствует <br> стандартной процедуре
     </p>
 </div>
-<section class="services">
-    <h2 class="services__title">Услуги и цены</h2>
-    <div class="container">
-        <div class="services-swiper">
-            <div class="swiper-wrapper">
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/лицо+тело1.jpg" alt="Лицо + тело" class="card__image">
-                    </div>
-                    <h3 class="card__name">ЛИЦО + ТЕЛО</h3>
-                    <p class="card__price">От 2000₽.</p>
-                    <!-- добавили только атрибут для идентификации сервиса -->
-                    <button class="card__button js-open-modal" data-service="face-body">
-                        Узнать больше
-                    </button>
-                </article>
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/обложка мах.jpg" alt="Тройной удар MAX" class="card__image">
-                    </div>
-                    <h3 class="card__name">ТРОЙНОЙ УДАР MAX</h3>
-                    <p class="card__price">От 3000₽.</p>
-                    <button class="card__button js-open-modal" data-service="triple-strike-max">
-                        Узнать больше
-                    </button>
-                </article>
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/пресс обл.jpg" alt="Прессотерапия + ИК-прогрев" class="card__image">
-                    </div>
-                    <h3 class="card__name">ПРЕССОТЕРАПИЯ + ИК-ПРОГРЕВ</h3>
-                    <p class="card__price">От 1000₽.</p>
-                    <button class="card__button js-open-modal" data-service="presso-ik">
-                        Узнать больше
-                    </button>
-                </article>
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/LPG массаж тела.jpg" alt="LPG массаж тела" class="card__image">
-                    </div>
-                    <h3 class="card__name">LPG МАССАЖ ТЕЛА</h3>
-                    <p class="card__price">От 1000₽.</p>
-                    <button class="card__button js-open-modal" data-service="lpg-body">
-                        Узнать больше
-                    </button>
-                </article>
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/лицо.jpg" alt="LPG массаж лица" class="card__image">
-                    </div>
-                    <h3 class="card__name">LPG МАССАЖ ЛИЦА</h3>
-                    <p class="card__price">От 2200₽.</p>
-                    <button class="card__button js-open-modal" data-service="lpg-face">
-                        Узнать больше
-                    </button>
-                </article>
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/кавитация.jpg" alt="Кавитация" class="card__image">
-                    </div>
-                    <h3 class="card__name">КАВИТАЦИЯ</h3>
-                    <p class="card__price">От 2200₽.</p>
-                    <button class="card__button js-open-modal" data-service="cavitation">
-                        Узнать больше
-                    </button>
-                </article>
-
-                <article class="card swiper-slide">
-                    <div class="card__image-wrapper">
-                        <img src="images/рф.jpg" alt="RF-лифтинг" class="card__image">
-                    </div>
-                    <h3 class="card__name">RF-ЛИФТИНГ</h3>
-                    <p class="card__price">От 2200₽.</p>
-                    <button class="card__button js-open-modal" data-service="rf-lifting">
-                        Узнать больше
-                    </button>
-                </article>
-
-            </div><!-- /.swiper-wrapper -->
-            <div class="swiper-pagination"></div>
-        </div><!-- /.services-swiper -->
-    </div><!-- /.container -->
-</section>
-<div class="services__button">
-    <button class="animated-button">
-        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-            <path
-                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-            ></path>
-        </svg>
-        <span class="text">Выбрать услугу</span>
-        <span class="circle"></span>
-        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-            <path
-                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-            ></path>
-        </svg>
-    </button>
-</div>
-<section class="before-after">
+<section class="before-after" id="ba">
     <h2 class="ba__title">До / После</h2>
 
     <!-- Блок 1 -->
@@ -264,17 +281,14 @@
             <!-- Фронтально -->
             <div class="ba__view swiper-slide">
                 <img src="images/result/ЧБ-бок.jpg" alt="Блок 1 – Фронтально: До/После">
-                <div class="ba__view-title">Фронтально</div>
             </div>
             <!-- Сбоку -->
             <div class="ba__view swiper-slide">
                 <img src="images/result/ЧБ-фронт.jpg" alt="Блок 1 – Сбоку: До/После">
-                <div class="ba__view-title">Сбоку</div>
             </div>
             <!-- Сзади -->
             <div class="ba__view swiper-slide">
                 <img src="images/result/ЧБ-зад.jpg" alt="Блок 1 – Сзади: До/После">
-                <div class="ba__view-title">Сзади</div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -285,95 +299,78 @@
         <div class="swiper-wrapper">
             <div class="ba__view swiper-slide">
                 <img src="images/result/ЧЧ-бок.jpg" alt="Блок 2 – Фронтально: До/После">
-                <div class="ba__view-title">Фронтально</div>
             </div>
             <div class="ba__view swiper-slide">
                 <img src="images/result/ЧЧ-фронт.jpg" alt="Блок 2 – Сбоку: До/После">
-                <div class="ba__view-title">Сбоку</div>
             </div>
             <div class="ba__view swiper-slide">
                 <img src="images/result/ЧЧ-зад.jpg" alt="Блок 2 – Сзади: До/После">
-                <div class="ba__view-title">Сзади</div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Блок 3 -->
     <div class="before-after-swiper services-swiper">
         <div class="swiper-wrapper">
             <div class="ba__view swiper-slide">
                 <img src="images/result/Н-бок.jpg" alt="Блок 3 – Фронтально: До/После">
-                <div class="ba__view-title">Фронтально</div>
+
             </div>
             <div class="ba__view swiper-slide">
                 <img src="images/result/Н-фронт.jpg" alt="Блок 3 – Сбоку: До/После">
-                <div class="ba__view-title">Сбоку</div>
             </div>
             <div class="ba__view swiper-slide">
                 <img src="images/result/Н-зад.jpg" alt="Блок 3 – Сзади: До/После">
-                <div class="ba__view-title">Сзади</div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
 </section>
-
-<section class="reviews" id="reviews">
-    <h2 class="reviews__title">Отзывы</h2>
-    <div class="reviews__widget">
-        <iframe
-                class="reviews__iframe"
-                src="https://yandex.ru/maps-reviews-widget/217321812302?comments"
-                allowfullscreen
-        ></iframe>
-        <a
-                class="reviews__link"
-                href="https://yandex.ru/maps/org/lpg_vesna/217321812302/"
-                target="_blank"
-        >
-            Lpg Vesna на карте Санкт‑Петербурга — Яндекс Карты
-        </a>
-    </div>
-</section>
-<section class="contacts">
-    <h2 class="contacts__title">Контакты</h2>
+<section class="about" id="about">
     <div class="container">
-        <div class="contacts__wrapper">
-            <!-- Левая колонка с данными -->
-            <div class="contacts__details">
+        <h2 class="about__title">О нас</h2>
+
+        <div class="about__grid">
+            <div class="about__contacts">
                 <div class="contacts__item">
                     <h3 class="contacts__item-title">Адрес</h3>
-                    <p class="contacts__item-text">Московский просп., 36, Санкт-Петербург</p>
+                    <p class="contacts__item-text">Московский пр-т., 36, Санкт-Петербург</p>
                 </div>
+
                 <div class="contacts__item">
                     <h3 class="contacts__item-title">Для связи по телефону</h3>
                     <p class="contacts__item-text">
-                        <a href="tel:+79817545707">+7 (981) 754‑57‑07</a>
+                        <a href="tel:+79817545707">+7 (981) 754-57-07</a>
                     </p>
                 </div>
+
                 <div class="contacts__item">
                     <h3 class="contacts__item-title">Время работы</h3>
-                    <p class="contacts__item-text">Круглосуточно хх хх-21:00</p>
+                    <p class="contacts__item-text">Круглосуточно хх:хх–21:00</p>
                 </div>
-            </div>
 
-            <!-- Правая колонка с картой -->
-            <div class="contacts__map-wrapper">
                 <h3 class="contacts__map-title">Как до нас добраться</h3>
+                <p class="contacts__item-text">Минута ходьбы от ст. метро Технологический Институт</p>
                 <div class="contacts__map">
                     <iframe
                             src="https://yandex.ru/map-widget/v1/?um=constructor%3ACHXUrQjW&amp;source=constructor"
-                            frameborder="0"
-                            allowfullscreen
-                    ></iframe>
+                            loading="lazy" allowfullscreen></iframe>
                 </div>
             </div>
+            <div class="about__reviews">
+                <div class="reviews__widget">
+                    <iframe class="reviews__iframe"
+                            src="https://yandex.ru/maps-reviews-widget/217321812302?comments"
+                            loading="lazy" allowfullscreen></iframe>
+                    <a class="reviews__link"
+                       href="https://yandex.ru/maps/org/lpg_vesna/217321812302/"
+                       target="_blank" rel="noopener">Больше отзывов на Яндекс Картах</a>
+                </div>
+            </div>
+
         </div>
     </div>
-
 </section>
-
 
 
 <div class="modal" id="modal-info">

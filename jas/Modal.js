@@ -1,6 +1,3 @@
-// js/modal.js
-
-// 1. Данные по сервисам
 const servicesData = {
     "face-body": {
         img: "images/лицо+тело1.jpg",

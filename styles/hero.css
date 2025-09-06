@@ -1,0 +1,98 @@
+/* ===== hero.css ===== */
+.hero {
+    position: relative;
+    height: 840px;
+    overflow: hidden;
+    width: 100%;
+    .Vesna-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 250px;
+        font-family: "Poiret One", sans-serif;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.79);
+        z-index: 2;
+        text-transform: uppercase;
+        letter-spacing: 43px;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+        @media screen and (max-width: 800px){
+            font-size: 170px;
+            letter-spacing: 20px;
+        }
+
+    }
+}
+
+.hero__img--blur {
+    position: absolute;
+    margin-left: 110px;
+    top: 0;
+    left: -122px;
+    width: calc(100% + 200px);
+    height: 105%;
+    filter: blur(25px) brightness(0.55);
+    z-index: 0;
+}
+
+.hero__img--main {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    margin-left: 31px;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        height: 600px;
+    }
+
+    .hero__img--main {
+        margin-left: 10%;
+    }
+
+    .hero__img--blur {
+        margin-left: 60px;
+        left: -60px;
+        width: calc(100% + 120px);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .hero {
+        height: 500px;
+    }
+
+    .hero__img--main {
+        margin-left: 8%;
+    }
+}
+
+@media screen and (max-width: 526px) {
+    .hero__img--main {
+        background-image: url("images/Лого.PNG");
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        margin-left: 0;
+    }
+
+    .hero__img--blur {
+        display: none !important;
+    }
+
+    .hero {
+        height: 350px;
+        overflow: hidden;
+        padding-bottom: 0 !important;
+    }
+
+    .hero .container {
+        height: auto !important;
+    }
+}

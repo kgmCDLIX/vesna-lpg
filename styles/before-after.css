@@ -1,0 +1,81 @@
+/* ===== before-after.css ===== */
+.before-after {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Scope swiper styles to .before-after to avoid conflicts with services */
+.before-after .services-swiper {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.before-after .services-swiper .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    transition: transform .3s ease;
+}
+
+.before-after .ba__view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid #AADA26;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+}
+
+.before-after .ba__view img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.before-after .ba__view-title {
+    margin-top: 8px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.before-after .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    user-select: none;
+}
+
+.before-after .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.before-after .swiper-pagination-bullet-active {
+    background: #A4DD3A;
+}
+
+@media (max-width: 1024px) {
+    .before-after .services-swiper .swiper-wrapper {
+        display: flex;
+    }
+}
+
+.before-after .services-swiper .ba__view {
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+
+.before-after .services-swiper .ba__view img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
