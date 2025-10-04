@@ -129,19 +129,19 @@
 
 @media screen and (max-width: 1024px) {
     .nav__left {
-        margin-left: 115px;
+        margin-left: 125px;
     }
 
     .nav__right {
-        margin-right: 130px;
+        margin-right: 145px;
     }
 
     .nav__list {
-        gap: 15px;
+        gap: 18px;
     }
 
     .nav__item a, .nav__cta {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 

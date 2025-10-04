@@ -6,6 +6,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -38,6 +39,12 @@ h2 {
     color: #AADA26;
     margin-bottom: 40px;
     position: relative;
+    @media screen and (max-width: 450px){
+        font-size: 46px;
+    }
+    @media screen and (max-width: 360px){
+        font-size: 38px;
+    }
 }
 
 h2::after {
@@ -47,6 +54,10 @@ h2::after {
     height: 5px;
     background: #AADA26;
     margin: 8px auto 0;
+    @media screen and (max-width: 550px){
+        width: 180px;
+        height: 4px;
+    }
 }
 
 
@@ -68,4 +79,21 @@ body.modal-open {
     p, li {
         font-family: "Victor Mono", monospace;
     }
+}
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 48px;
+    }
+}
+
+a.card__button,
+a.card__button:link,
+a.card__button:visited,
+a.card__button:hover,
+a.card__button:active,
+a.card__button:focus {
+    text-decoration: none;
+}
+@media (max-width: 850px) {
+    .burger-button span { background:#111; }  !important; /* вместо белого */
 }
