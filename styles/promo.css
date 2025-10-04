@@ -147,15 +147,14 @@
 .promo__offer{
     display: flex;
     align-items: center;
-    gap: .5ch;          /* расстояние между словами и пилюлей */
-    flex-wrap: wrap;    /* чтобы всё аккуратно переносилось */
-    letter-spacing: .07em; /* как на макете */
+    gap: .5ch;
+    flex-wrap: wrap;
+    letter-spacing: .07em;
 }
 
 /* зелёная пилюля */
 .pill{
-    --pill-bg:#AADA26;
-    background: var(--pill-bg);
+    background: #AADA26;
     color:#fff;
     padding:.15em .6em .2em;
     border-radius:.6em;
